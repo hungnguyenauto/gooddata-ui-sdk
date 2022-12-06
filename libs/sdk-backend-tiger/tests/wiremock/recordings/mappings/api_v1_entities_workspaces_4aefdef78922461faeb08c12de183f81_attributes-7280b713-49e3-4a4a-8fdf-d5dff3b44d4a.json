@@ -1,0 +1,44 @@
+{
+    "id": "7280b713-49e3-4a4a-8fdf-d5dff3b44d4a",
+    "name": "api_v1_entities_workspaces_4aefdef78922461faeb08c12de183f81_attributes",
+    "request": {
+        "url": "/api/v1/entities/workspaces/4aefdef78922461faeb08c12de183f81/attributes?include=labels%2CdefaultView%2Cdataset&size=250&page=0",
+        "method": "GET",
+        "headers": {
+            "Accept": {
+                "equalTo": "application/vnd.gooddata.api+json"
+            },
+            "Content-Type": {
+                "equalTo": "application/vnd.gooddata.api+json",
+                "caseInsensitive": true
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "api_v1_entities_workspaces_4aefdef78922461faeb08c12de183f81_attributes-7280b713-49e3-4a4a-8fdf-d5dff3b44d4a.json",
+        "headers": {
+            "Date": "Fri, 24 Feb 2023 07:01:31 GMT",
+            "Content-Type": "application/vnd.gooddata.api+json",
+            "Vary": [
+                "Accept-Encoding",
+                "Origin",
+                "Access-Control-Request-Method",
+                "Access-Control-Request-Headers"
+            ],
+            "X-GDC-TRACE-ID": "b5ea0b9604c84565",
+            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "0",
+            "X-Content-Type-Options": "nosniff",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+            "X-XSS-Protection": "1 ; mode=block",
+            "Referrer-Policy": "no-referrer",
+            "Set-Cookie": "SPRING_REDIRECT_URI=; Path=/; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; HttpOnly; SameSite=None",
+            "Permission-Policy": "geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; fullscreen 'none'; payment 'none';"
+        }
+    },
+    "uuid": "7280b713-49e3-4a4a-8fdf-d5dff3b44d4a",
+    "persistent": true,
+    "insertionIndex": 12
+}

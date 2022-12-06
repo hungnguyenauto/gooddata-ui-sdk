@@ -1,8 +1,8 @@
 {
-    "id": "4f062c16-02c6-4c1e-ae92-7b2620df6c5b",
-    "name": "api_v1_entities_workspaces_4dc4e033e611421791adea58d34d958c_metrics",
+    "id": "98fd8e51-01a7-47d2-a9aa-7dc8cfdaba56",
+    "name": "api_v1_entities_workspaces_4aefdef78922461faeb08c12de183f81_metrics",
     "request": {
-        "url": "/api/v1/entities/workspaces/4dc4e033e611421791adea58d34d958c/metrics?size=250&page=0",
+        "url": "/api/v1/entities/workspaces/4aefdef78922461faeb08c12de183f81/metrics?size=250&page=0",
         "method": "GET",
         "headers": {
             "Accept": {
@@ -16,12 +16,17 @@
     },
     "response": {
         "status": 200,
-        "bodyFileName": "api_v1_entities_workspaces_4dc4e033e611421791adea58d34d958c_metrics-4f062c16-02c6-4c1e-ae92-7b2620df6c5b.json",
+        "bodyFileName": "api_v1_entities_workspaces_4aefdef78922461faeb08c12de183f81_metrics-98fd8e51-01a7-47d2-a9aa-7dc8cfdaba56.json",
         "headers": {
-            "Date": "Wed, 11 Jan 2023 07:56:43 GMT",
+            "Date": "Fri, 24 Feb 2023 07:01:31 GMT",
             "Content-Type": "application/vnd.gooddata.api+json",
-            "Vary": ["Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"],
-            "X-GDC-TRACE-ID": "d6fa595075ceea92",
+            "Vary": [
+                "Accept-Encoding",
+                "Origin",
+                "Access-Control-Request-Method",
+                "Access-Control-Request-Headers"
+            ],
+            "X-GDC-TRACE-ID": "56471fbe4f45787c",
             "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
             "Pragma": "no-cache",
             "Expires": "0",
@@ -33,7 +38,7 @@
             "Permission-Policy": "geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; fullscreen 'none'; payment 'none';"
         }
     },
-    "uuid": "4f062c16-02c6-4c1e-ae92-7b2620df6c5b",
+    "uuid": "98fd8e51-01a7-47d2-a9aa-7dc8cfdaba56",
     "persistent": true,
     "insertionIndex": 11
 }

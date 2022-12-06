@@ -108,9 +108,10 @@ describe("tiger elements", () => {
                 .forDisplayForm(attributeDisplayFormRef(Md.Account.Default))
                 .withLimit(2)
                 .query();
-
             const page = await result.goTo(3);
-            expect(page).toMatchSnapshot();
+            const sanitizeResult = JSON.parse(JSON.stringify(page));
+            delete sanitizeResult.items;
+            expect(sanitizeResult).toMatchSnapshot();
         });
 
         it("should return empty result for out-of-range page in initial request", async () => {

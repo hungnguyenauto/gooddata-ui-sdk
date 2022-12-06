@@ -1,6 +1,6 @@
 // (C) 2022 GoodData Corporation
 
-import { testBackend, testWorkspace } from "./backend";
+import { testBackend, testWorkspace, sanitizeWorkspace, sortToOder } from "./backend";
 import { measureLocalId, newArithmeticMeasure, newPopMeasure } from "@gooddata/sdk-model";
 
 import * as Md from "../../src/fixtures/full";
@@ -14,8 +14,8 @@ beforeAll(async () => {
 describe("tiger catalog", () => {
     it("should read catalog for reference workspace", async () => {
         const result = await backend.workspace(testWorkspace()).catalog().load();
-
-        expect(result).toMatchSnapshot();
+        const sanitizedResult = await sanitizeWorkspace(result, "uri", "sanitize_uri");
+        expect(sortToOder(sanitizedResult)).toMatchSnapshot();
     });
 
     it("should read catalog for reference workspace with additional date attributes", async () => {
@@ -39,7 +39,8 @@ describe("tiger catalog", () => {
             })
             .load();
 
-        expect(result).toMatchSnapshot();
+        const sanitizedResult = await sanitizeWorkspace(result, "uri", "sanitize_uri");
+        expect(sortToOder(sanitizedResult)).toMatchSnapshot();
     });
 
     it("should correctly get catalog availability when derived and arithmetic measures are in the mix", async () => {
@@ -67,6 +68,7 @@ describe("tiger catalog", () => {
             ])
             .load();
 
-        expect(availability).toMatchSnapshot();
+        const sanitizedResult = await sanitizeWorkspace(availability, "uri", "sanitize_uri");
+        expect(sortToOder(sanitizedResult)).toMatchSnapshot();
     });
 });
