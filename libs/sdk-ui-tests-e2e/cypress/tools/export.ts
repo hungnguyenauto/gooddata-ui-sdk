@@ -13,6 +13,7 @@ export class Export {
 
     expectExportedPDF(filename: string, contents: string) {
         messages.hasSuccessMessage("Export successful.");
+        cy.wait(1000); // make sure file is stored in the local
         const downloadsFolder = Cypress.config("downloadsFolder");
         cy.readFile(join(downloadsFolder, filename)).should("exist");
         cy.readPdf(join(downloadsFolder, filename)).then((dataContent) => {
