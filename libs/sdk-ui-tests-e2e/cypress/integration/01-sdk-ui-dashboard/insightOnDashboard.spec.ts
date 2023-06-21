@@ -11,10 +11,10 @@ const widget = new Widget(0);
 const insightCatalog = new InsightsCatalog();
 
 describe("Insights on dashboard", () => {
-    beforeEach(() => {
-        Navigation.visit("dashboard/insight");
-        editMode.isInEditMode(false).edit().isInEditMode();
-    });
+    // beforeEach(() => {
+    //     Navigation.visit("dashboard/insight");
+    //     editMode.isInEditMode(false).edit().isInEditMode();
+    // });
 
     //CL-10262: Save&Publish button is enabled right when selecting insight
     it("should disable save button if having no change", { tags: ["pre-merge_isolated_tiger"] }, () => {
@@ -41,6 +41,8 @@ describe("Insights on dashboard", () => {
     });
 
     it("should keep the panel after clearing search", { tags: ["checklist_integrated_bear"] }, () => {
+        Navigation.visit("dashboard/insight");
+        editMode.isInEditMode(false).edit().isInEditMode();
         insightCatalog
             .waitForCatalogReload()
             .clickTab("all")

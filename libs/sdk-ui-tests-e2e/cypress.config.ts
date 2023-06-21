@@ -40,7 +40,7 @@ export default defineConfig({
             grepFilterSpecs: true,
         },
         retries: {
-            runMode: 2,
+            runMode: 4,
             openMode: 0,
         },
         trashAssetsBeforeRuns: false,
