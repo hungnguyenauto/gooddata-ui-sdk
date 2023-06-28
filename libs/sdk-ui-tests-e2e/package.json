@@ -64,7 +64,7 @@
         "build-scenarios": "webpack --config scenarios/webpack.config.cjs --config-name default",
         "start-scenarios": "webpack serve --mode development --config scenarios/webpack.config.cjs --config-name local-run",
         "export-fixture": "node ./reference_workspace/export_workspace_fixture.js",
-        "create-ref-workspace": "node ./reference_workspace/create_ref_workspace.js && npm run prettier-write",
+        "": "node ./reference_workspace/create_ref_workspace.js && npm run prettier-write",
         "delete-ref-workspace": "node ./reference_workspace/delete_ref_workspace.js",
         "update-ref-workspace": "npm run delete-ref-workspace && npm run create-ref-workspace"
     },
@@ -128,7 +128,7 @@
         "clean-webpack-plugin": "^4.0.0",
         "compression-webpack-plugin": "^7.1.0",
         "css-loader": "^6.7.1",
-        "cypress": "^12.10.0",
+        "cypress": "^12.15.0",
         "cypress-real-events": "^1.7.6",
         "dependency-cruiser": "^10.1.1",
         "dotenv-webpack": "^7.0.2",

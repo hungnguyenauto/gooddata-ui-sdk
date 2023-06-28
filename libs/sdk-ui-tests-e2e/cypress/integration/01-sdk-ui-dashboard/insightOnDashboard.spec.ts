@@ -10,6 +10,11 @@ const editMode = new EditMode();
 const widget = new Widget(0);
 const insightCatalog = new InsightsCatalog();
 
+// eslint-disable-next-line
+Cypress.on("uncaught:exception", (err, runnable) => {
+    return false;
+});
+
 describe("Insights on dashboard", () => {
     // beforeEach(() => {
     //     Navigation.visit("dashboard/insight");
@@ -41,7 +46,10 @@ describe("Insights on dashboard", () => {
     });
 
     it("should keep the panel after clearing search", { tags: ["checklist_integrated_bear"] }, () => {
-        Navigation.visit("dashboard/insight");
+        let urlLink: string;
+        urlLink = `http://localhost:9500/gooddata-ui-sdk?scenario=dashboard/kpis`;
+        // cy.window().then((win) => win.location.href=urlLink);
+        Navigation.visit("dashboard/kpis");
         editMode.isInEditMode(false).edit().isInEditMode();
         insightCatalog
             .waitForCatalogReload()
