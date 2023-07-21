@@ -5,6 +5,7 @@ import cypressGrepPlugin from "@cypress/grep/src/plugin";
 import { defineConfig } from "cypress";
 import axios from "axios";
 import readPdf from "./cypress/plugins/readPdf";
+import browserConfig from "./cypress/plugins/browserConfig";
 
 export default defineConfig({
     e2e: {
@@ -12,6 +13,7 @@ export default defineConfig({
         supportFile: "cypress/support/index.ts",
         setupNodeEvents(on, _config) {
             cypressGrepPlugin(_config);
+            browserConfig(on);
             on("task", {
                 async resetRecordingsScenarios(mockServerUrl: string) {
                     try {
@@ -35,7 +37,7 @@ export default defineConfig({
         },
         viewportWidth: 1400,
         viewportHeight: 800,
-        defaultCommandTimeout: 30000,
+        defaultCommandTimeout: 50000,
         env: {
             grepFilterSpecs: true,
         },

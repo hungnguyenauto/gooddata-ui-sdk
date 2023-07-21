@@ -15,7 +15,10 @@ export class DashboardMenu {
     }
 
     clickOption(optionLabel: string) {
-        this.getDropdownItemElement(optionLabel).should("not.have.class", "is-disabled").click();
+        this.getDropdownItemElement(optionLabel)
+            .invoke("removeAttr", "target")
+            .should("not.have.class", "is-disabled")
+            .click();
         return this;
     }
 
