@@ -5,7 +5,7 @@ import cypressGrepPlugin from "@cypress/grep/src/plugin";
 import { defineConfig } from "cypress";
 import axios from "axios";
 import readPdf from "./cypress/plugins/readPdf";
-import parseXlsx from "./cypress/plugins/parseXlsx";
+// import parseXlsx from "./cypress/plugins/parseXlsx";
 
 export default defineConfig({
     e2e: {
@@ -32,7 +32,6 @@ export default defineConfig({
                 },
             });
             readPdf(on, _config);
-            parseXlsx(on, _config);
             return _config;
         },
         viewportWidth: 1400,
